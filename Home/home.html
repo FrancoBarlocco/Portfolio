@@ -1,0 +1,54 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Barlocco - Portafolio</title>
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="../assets/franco.jpeg" alt="Your Photo" class="navbar-photo">
+            <span class="navbar-name">Franco Barlocco</span>
+        </div>
+        <div class="navbar-right">
+            <a href="#about">Sobre mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="spinner-container">
+            <div class="spinner">
+                <div class="spinner1"></div>
+            </div>
+            <div class="image-container">
+                <img src="../assets/franco.jpeg" alt="Your Photo" class="spinner-image">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Franco Barlocco</h1>
+            <p>Portafolio</p>
+        </div>
+    </div>
+
+    <section id="about" class="section about">
+        <div class="card">
+            <h2>Sobre mi</h2>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2>Featured Projects</h2>
+        <div id="project-grid" class="project-grid">
+            <!-- Los proyectos se cargarán aquí mediante JavaScript -->
+        </div>
+    </section>
+
+    <!-- Enlazar el archivo JavaScript -->
+    <script src="./home.js"></script>
+</body>
+</html>
