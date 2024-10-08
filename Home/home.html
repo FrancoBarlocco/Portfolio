@@ -1,4 +1,3 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,7 +14,7 @@
         </div>
         <div class="navbar-right">
             <a href="#about">Sobre mí</a>
-            <a href="#projects">Proyectos</a>
+            <a href="#projects">Investigaciones</a>
             <a href="#contact">Contacto</a>
         </div>
     </nav>
@@ -37,18 +36,46 @@
 
     <section id="about" class="section about">
         <div class="card">
-            <h2>Sobre mi</h2>
+            <h2>Sobre mí</h2>
+            <p>Soy analista informático en SECIU, parte de la Universidad de la República (Udelar). Actualmente, estoy cursando la carrera de Ingeniería en Informática en la Universidad Católica del Uruguay, combinando mi experiencia profesional con el aprendizaje continuo en el campo de la tecnología. Mi enfoque abarca desde la implementación de soluciones informáticas hasta el análisis de datos, con un interés constante en desarrollar habilidades y conocimientos para contribuir al crecimiento tecnológico.</p>
         </div>
     </section>
 
     <section id="projects" class="section projects">
-        <h2>Featured Projects</h2>
+        <h2 class = "inv">Investigaciones</h2>
         <div id="project-grid" class="project-grid">
-            <!-- Los proyectos se cargarán aquí mediante JavaScript -->
+            <!-- Card 1 -->
+            <div class="project-card" onclick="location.href='../Investigacion 1/investigacion1.html'">
+                <img src="../assets/Regresion lineal simple.png" alt="Investigación 1">
+                <h3>Regresión lineal</h3>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="project-card" onclick="location.href='../Investigacion 2/investigacion2.html'">
+                <img src="../assets/ml-portada.png" alt="Investigación 2">
+                <h3>Tratamiento previo de los datos y fundamentos de los algoritmos ML</h3>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="project-card" onclick="location.href='../Investigacion 3/investigacion3.html'">
+                <img src="../assets/ml-portada.png" alt="Investigación 3">
+                <h3>Caso de estudio Boston housing</h3>
+            </div>
+            
+        </div>
+    </section>
+    <section id="projects" class="section projects">
+        <h2 class = "inv">Github</h2>
+        <div id="project-grid" class="project-grid">
+            <!-- Card 3 -->
+            <div class="project-card" onclick="window.open('https://www.github.com/FrancoBarlocco/Inteligencia-Artificial-1', '_blank')">
+                <img src="../assets/ml-portada.png" alt="Investigación 3">
+                <h3>Github</h3>
+            </div>
+            
         </div>
     </section>
 
-    <!-- Enlazar el archivo JavaScript -->
     <script src="./home.js"></script>
 </body>
 </html>

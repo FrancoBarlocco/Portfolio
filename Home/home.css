@@ -1,18 +1,15 @@
-html,
-body {
+html, body {
     margin: 0;
-    /* Elimina el margen por defecto */
-
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Estructura general */
 .hero {
     display: flex;
     flex-direction: column;
-    /* Stack elements vertically */
     align-items: center;
-    /* Center content horizontally */
     justify-content: center;
-    /* Center content vertically */
     height: 100vh;
     background: black;
     text-align: center;
@@ -22,19 +19,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centra los elementos horizontalmente */
 }
 
 .spinner-container {
     position: relative;
-    /* Make the container the positioning reference */
     width: 185px;
     height: 185px;
 }
 
 .spinner {
     position: absolute;
-    /* Position the spinner within the container */
     top: 0;
     left: 0;
     width: 100%;
@@ -54,11 +48,9 @@ body {
 
 .image-container {
     position: absolute;
-    /* Position the image within the container */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Center the image within the container */
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -70,7 +62,6 @@ body {
     border-radius: 50%;
     object-fit: cover;
 }
-
 
 @keyframes spinning82341 {
     to {
@@ -97,29 +88,35 @@ section {
     gap: 50px;
 }
 
+/* Estilos de la sección "Sobre mí" */
 .about {
     display: flex;
     flex-direction: column;
-    /* Stack elements vertically */
     align-items: center;
-    /* Center content horizontally */
     justify-content: center;
-    /* Center content vertically */
     background-color: #000000;
     padding: 80px 20px;
-    gap: 50px;
+    text-align: center;
+    color: #f8f8f8;
 }
 
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
 
+.about p {
+    max-width: 800px;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
 
+/* Sección de proyectos */
 .projects {
     display: flex;
     flex-direction: column;
-    /* Stack elements vertically */
     align-items: center;
-    /* Center content horizontally */
     justify-content: center;
-    /* Center content vertically */
     background-color: #fff;
     padding: 80px 20px;
     gap: 50px;
@@ -127,10 +124,10 @@ section {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas fijas */
     gap: 20px;
     justify-content: center;
-    /* Center the grid within the section */
+    max-width: 1200px; /* Limitar el ancho máximo */
 }
 
 .project-card {
@@ -139,6 +136,8 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Hacer que las cards ocupen todo el ancho disponible */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
 }
 
 .project-card:hover {
@@ -165,39 +164,53 @@ footer {
     color: #333;
 }
 
+/* Card de investigación */
 .card {
-    width: 75%;
-    height: 254px;
+    width: 100%; /* Mantener el ancho completo de la card */
     background: #000000;
     position: relative;
     display: flex;
-    place-content: center;
-    place-items: center;
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar elementos horizontalmente */
+    justify-content: center; /* Centrar elementos verticalmente */
     overflow: hidden;
     border-radius: 20px;
+    box-sizing: border-box;
+    padding: 40px 20px; /* Añadir padding para dar espacio al contenido */
+    text-align: center; /* Centrar el texto */
 }
 
 .card h2 {
     z-index: 1;
     color: white;
-    font-size: 2em;
+    font-size: 2.5rem; /* Ajustar tamaño del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    margin-top: 0; /* Asegura que no haya margen superior */
+}
+
+.card p {
+    z-index: 1;
+    color: white;
+    font-size: 1.2rem; /* Ajustar tamaño del texto */
+    margin-top: 0; /* Eliminar margen superior */
+    max-width: 800px; /* Limitar el ancho del párrafo */
 }
 
 .card::before {
     content: '';
     position: absolute;
     width: 100%;
-    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
     height: 130%;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
+    z-index: 0; /* Asegurar que el fondo esté detrás del contenido */
 }
 
 @keyframes rotBGimg {
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -209,10 +222,10 @@ footer {
     background: #020202;
     inset: 5px;
     border-radius: 15px;
+    z-index: 0; /* Asegurar que esté detrás del contenido */
 }
 
-
-/* Agregar a home.css */
+/* Estilo para detalles de proyecto */
 #project-details {
     position: fixed;
     top: 50%;
@@ -244,7 +257,7 @@ footer {
     font-size: 1.5em;
 }
 
-/* Agregar a home.css */
+/* Estilo para la navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -280,4 +293,8 @@ footer {
 
 .navbar-right a:hover {
     text-decoration: underline;
+}
+
+.inv{
+    color: black;
 }

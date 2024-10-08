@@ -1,5 +1,5 @@
 // home.js
-
+/*
 // Seleccionando el contenedor de los proyectos
 const projectGrid = document.getElementById('project-grid');
 
@@ -45,3 +45,4 @@ function loadProjects() {
 
 // Llamar a la función para cargar los proyectos al cargar la página
 loadProjects();
+*/
